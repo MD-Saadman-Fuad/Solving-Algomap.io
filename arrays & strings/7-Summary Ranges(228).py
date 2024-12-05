@@ -1,5 +1,5 @@
 class Solution:
-    def summaryRanges(self, nums: List[int]) -> List[str]:
+    def summaryRanges(self, nums: list[int]) -> list[str]:
         answer = []
         i=0
 
@@ -15,3 +15,6 @@ class Solution:
             i+=1
         return answer
     
+s=Solution()
+nums = [0,1,2,4,5,7]
+print(s.summaryRanges(nums))
