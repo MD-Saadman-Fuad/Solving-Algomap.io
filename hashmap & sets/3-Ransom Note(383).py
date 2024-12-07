@@ -13,29 +13,29 @@ class Solution:
         # return False
 
 # O(R+M)
-        # from collections import Counter
+        from collections import Counter
 
-        # counter = Counter(magazine)
+        counter = Counter(magazine)
 
-        # for i in range(len(ransomNote)):
-        #     if ransomNote[i] in counter:
-        #         if counter[ransomNote[i]] > 0:
-        #             counter[ransomNote[i]] -= 1
-        #         else:
-        #             return False
-        #     else:
-        #         return False
+        for i in range(len(ransomNote)):
+            if ransomNote[i] in counter:
+                if counter[ransomNote[i]] > 0:
+                    counter[ransomNote[i]] -= 1
+                else:
+                    return False
+            else:
+                return False
 
-        # return True
+        return True
 
 #Top Code from leetcode
 
-        from collections import Counter
-        st1, st2 = Counter(ransomNote), Counter(magazine)
-        if st1 & st2 == st1:
-            # print(st1 & st2)
-            return True
-        return False
+        # from collections import Counter
+        # st1, st2 = Counter(ransomNote), Counter(magazine)
+        # if st1 & st2 == st1:
+        #     # print(st1 & st2)
+        #     return True
+        # return False
 
 s = Solution()
 
